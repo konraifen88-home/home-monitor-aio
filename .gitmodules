@@ -1,0 +1,15 @@
+[submodule "config-service"]
+	path = config-service
+	url = https://github.com/konraifen88-home/config-service
+[submodule "discovery-service"]
+	path = discovery-service
+	url = https://github.com/konraifen88-home/discovery-service
+[submodule "gateway-service"]
+	path = gateway-service
+	url = https://github.com/konraifen88-home/gateway-service
+[submodule "docs-service"]
+	path = docs-service
+	url = https://github.com/konraifen88-home/docs-service
+[submodule "user-service"]
+	path = user-service
+	url = https://github.com/konraifen88-home/user-service
