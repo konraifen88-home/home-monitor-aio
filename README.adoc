@@ -1,0 +1,20 @@
+= Home Monitor AIO
+
+Project to build all projects  of the home monitor at once.
+
+== Checkout
+
+To checkout the submodules must be initialized after cloning.
+
+[source,bash]
+----
+git clone https://github.com/konraifen88-home/home-monitor-aio.git
+git submodule init
+----
+
+To update to the latest versions of the services you can use
+
+[source,bash]
+----
+git submodule update
+----
