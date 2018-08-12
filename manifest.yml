@@ -1,0 +1,27 @@
+---
+defaults: &defaults
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
+  instances: 1
+  memory: 1G
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 10.0.+ } }'
+    CONFIG_SERVICE_URL: https://kg-test-config-service.run.aws-usw02-pr.ice.predix.io
+    DISCOVERY_SERVICE_URL: https://kg-test-discovery-service.run.aws-usw02-pr.ice.predix.io
+
+applications:
+- name: kg-test-config-service
+  path: config-service/build/libs/config-service-0.0.1-SNAPSHOT.jar
+  <<: *defaults
+- name: kg-test-discovery-service
+  path: discovery-service/build/libs/discovery-service-0.0.1-SNAPSHOT.jar
+  <<: *defaults
+- name: kg-test-gateway-service
+  path: gateway-service/build/libs/gateway-service-0.0.1-SNAPSHOT.jar
+  <<: *defaults
+- name: kg-test-user-service
+  path: user-service/build/libs/user-service-0.0.1-SNAPSHOT.jar
+  <<: *defaults
+- name: kg-test-docs-service
+  path: docs-service/build/libs/docs-0.0.1-SNAPSHOT.jar
+  <<: *defaults
