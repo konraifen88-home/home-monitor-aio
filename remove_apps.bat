@@ -4,9 +4,10 @@ set CF_PREFIX=kg-test
 set SCRIPT_PATH=%~dp0
 set ALL_APPS=docs-service user-service gateway-service discovery-service config-service
 
-for /f "tokens=1,* delims= " %%a in ("%*") do set ARGS=%%b
+shift
+set ARGS=%*
 
-IF [%ARGS%] == [] (
+IF "%ARGS%" == "" (
     echo Set apps to %ALL_APPS%
     set APPS_TO_STOP=%ALL_APPS%
 ) else (
