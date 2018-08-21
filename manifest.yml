@@ -23,5 +23,5 @@ applications:
   path: user-service/build/libs/user-service-0.0.1-SNAPSHOT.jar
   <<: *defaults
 - name: kg-test-docs-service
-  path: docs-service/build/libs/docs-0.0.1-SNAPSHOT.jar
+  path: docs-service/build/libs/docs-service-0.0.1-SNAPSHOT.jar
   <<: *defaults
